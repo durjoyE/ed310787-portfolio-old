@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400");
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "PT Sans", sans-serif;
     background-color: #1d1d1d;
     color: white;
 }
@@ -248,11 +248,10 @@ nav ul li a:hover {
         margin: 0 auto 13% auto;
     }
     .hide-desktop {
-        color: white;
         display: none;
     }
     .hide-desktop img {
-        color: white;
+        fill: white;
     }
     nav ul {
         position: inherit;
@@ -272,6 +271,7 @@ nav ul li a:hover {
         padding: 1em 2em;
     }
     nav ui li a:hover {
+        color: #897c80;
         background-color: inherit;
     }
     .scroll {
