@@ -4,21 +4,10 @@ body {
     background-color: #1d1d1d;
     color: white;
     text-decoration: none;
-    height: 100%;
-    margin: 0;
+    height: 100vh;
+    margin: 0 auto 0 auto;
     padding: 0;
-    box-sizing: border-box;
-}
 
-html {
-    border: solid;
-    border-style: solid;
-    border-width: .5em;
-    border-top: hidden;
-    border-bottom: hidden;
-    border-color: #0eb490;
-    position: relative;
-    
 }
 
 p {
@@ -31,14 +20,14 @@ p {
     margin: 0;
     padding-top: 1em;
     margin-bottom: 0;
-    width: 50%;
+    height: 100%;
 }
 
 header {
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 50%;
+    height: 100px;
 }
 
 .navbar {
@@ -48,11 +37,11 @@ header {
     list-style: none;
     text-decoration: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 15px 0;
 }
 
 .navbar li a {
-    padding: 0 1em 0 1em;
+    margin: 10px;
 }
 
 a {
@@ -66,7 +55,7 @@ a:hover {
 }
 
 .footer {
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: 0;
     right: 0;
@@ -74,26 +63,75 @@ a:hover {
     background-color: #131313;
     color: white;
     text-align: center;
-    padding: 1em 0 1em;
-    height: 40px;
+    padding: 0 0 1em;
+    height: 1..75em;
+  }
+
+  .footer p {
+    padding-top: .75em;
+    color: #3d3d3d;
   }
 
   .name {
     color: #0eb490;
     font-weight: bolder;
     font-size: 2em;
+    text-align: center;
+    display: block;
+    margin: 0;
   }
 
   .intro {
     text-align: center;
     font-size: 1.25em;
-    line-height: normal;
-    margin: 1em 0 0 1em;
+    line-height: 1.4em;
+    padding-right: 1em;
   }
 
   .introBlurb {
-    margin: 1.5em;
+    padding: .5em 1em .5em 1em;
     text-align: center;
+    font-size: xx-large;
+  }
+
+  .latestProject {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 0em;
+  }
+
+  .latestProject big {
+    display: block;
+    text-align: left;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+
+  .latestProject h1 {
+    margin: 0;
+    margin-right: 1em;
+    padding-bottom: .25em;
+    font-size: 1.8em;
+    color: #a88add;
+    text-align: left;
+  }
+
+  .latestProject p {
+    display: block;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+    padding-bottom: .5em;
+    margin-right: .5em;
+  }
+
+  .latestInfo {
+    display: block;
+    width: 100%;  
+    text-align: left;
+    margin: auto;
   }
 
   ::-webkit-scrollbar {
@@ -118,6 +156,7 @@ a:hover {
 
   .workHeader {
     margin-top: 1em;
+    padding-bottom: 1em;
     font-size: larger;
     text-align: center;
   }
@@ -125,16 +164,20 @@ a:hover {
   .workGrid {
     list-style: none;
     text-align: center;
-    padding: 0 0 1em 0;
+    padding: 0 2em 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2em;
   }
 
   .workGrid ul li img{
     margin: 1em;
     padding: 1em;
+    
   }
 
   .thumbnail {
-    width: 80%;
+    width: 85%;
     text-align: center;
   }
 
@@ -145,22 +188,49 @@ a:hover {
   }
 
   .workDetails {
-    margin-top: .25em;
     margin-bottom: 1em;
   }
 
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+    border: solid;
+    border-style: solid;
+    border-width: .5em;
+    border-top: hidden;
+    border-bottom: hidden;
+    border-color: #0eb490;
+    box-sizing: border-box;
+    padding: 0 1em 0 1em;
+  }
+  
+  #content-wrap {
+  }
 
+  .indexContent {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
 
-  @media only screen and (min-width: 350px)  {
+  .errorNum {
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    color: #a88add;
+    
+  }
 
-    header {
-    }
-
+  .error {
+    font-size: 2.75em;
+    text-align: center;
+    padding: .5em 1em 0 1em;
   }
 
   @media only screen and (min-width: 500px)  {
 
     header {
+      height: 125px;
     }
 
   }
@@ -168,14 +238,185 @@ a:hover {
   @media only screen and (min-width: 650px)  {
 
     header {
+      height: 150px;
     }
 
+    .navbar li a {
+      margin: 15px;
+      font-size: large;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .intro {
+      font-size: 1em;
+    }
+
+    .introBlurb {
+      font-size: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    .latestProject big {
+      font-size: 2em;
+    }
+
+  }
+
+  @media only screen and (min-width: 750px)  {
+
+    .workGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project h2 {
+      font-size: xx-large;
+    }
+
+    .latestProject h1 {
+      margin: 0;
+      padding-right: 1em;
+      padding-bottom: .25em;
+      font-size: 2em;
+      color: #a88add;
+      text-align: left;
+    }
   }
 
   @media only screen and (min-width: 850px)  {
 
     header {
+      height: 200px;
+    }
 
+    .navbar li a {
+      margin: 20px;
+      font-size: x-large;
+    }
+
+    .navbar {
+      padding-bottom: 1em;
+    }
+
+    .workHeader {
+      font-size: x-large;
+    }
+
+    .latestProject p {
+      font-size: x-large;
+    }
+
+    .errorNum {
+      padding: 0;
+      font-size: 8em;
+    }
+
+    .error {
+      font-size: 4.5em;
+    }
+  }
+
+  @media only screen and (min-width: 1100px)  {
+
+    #page-container {
+      padding: 0;
+    }
+
+    .navbar {
+      padding-bottom: 2em;
+    }
+
+    .workGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .indexContent {
+      grid-template-columns: 30% 70%;
+      column-gap: 1em;
+    }
+
+    .intro {
+      text-align: left;
+      margin-left: 2em;
+      font-size: 2em;
+    }
+    
+    .name {
+      text-align: left;
+      font-size: 2..25em;
+      padding-bottom: .25em;
+      display: block;
+      line-height: .9em;
+    }
+
+    .introBlurb {
+      text-align: left;
+      padding: 0%;
+      font-size: .5em;
+    }
+
+    .latestProject {
+      column-gap: 1em;
+    }
+
+    .latestProject h1 {
+      text-align: left;
+    }
+
+    .latestInfo {
+      width: 100%;
+      padding: 0%;
+    }
+
+    .thumbnail {
+      width: 100%;
+    }
+
+    .errorNum {
+      padding: 0;
+      font-size: 8em;
+    }
+
+    .error {
+      font-size: 5em;
+    }
+
+  }
+
+  
+  @media only screen and (min-width: 1320px)  {
+
+    .latestProject {
+      column-gap: 2em;
+    }
+
+    .latestProject h1 {
+      font-size: 2.5em;
+    }
+
+    .latestProject p {
+      font-size: 2em;
+    }
+
+    .introBlurb {
+      text-align: left;
+      padding: 0%;
+      font-size: .8em;
+    }
+
+  }
+
+  @media only screen and (min-width: 2560px)  {
+
+    .workGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .error {
+      font-size: 6em;
     }
 
   }
