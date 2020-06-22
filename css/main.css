@@ -6,8 +6,13 @@ body {
     text-decoration: none;
     height: 100vh;
     margin: 0 auto 0 auto;
-    padding: 0;
+    padding: 10px;
+    padding-bottom: 1.75em;
 
+}
+
+html {
+  height: 100vh;
 }
 
 p {
@@ -55,7 +60,7 @@ a:hover {
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     right: 0;
@@ -63,13 +68,23 @@ a:hover {
     background-color: #131313;
     color: white;
     text-align: center;
-    padding: 0 0 1em;
     height: 1..75em;
+    display: block;
+    padding-bottom: 1em;
   }
 
   .footer p {
     padding-top: .75em;
     color: #3d3d3d;
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  .emLink{
+    text-decoration: underline;
+    color: #a88add;
   }
 
   .name {
@@ -115,6 +130,7 @@ a:hover {
     font-size: 1.8em;
     color: #a88add;
     text-align: left;
+    line-height: 1em;
   }
 
   .latestProject p {
@@ -131,7 +147,7 @@ a:hover {
     display: block;
     width: 100%;  
     text-align: left;
-    margin: auto;
+    padding-bottom: 1em;
   }
 
   ::-webkit-scrollbar {
@@ -143,7 +159,7 @@ a:hover {
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #897c80;
+    background: #0eb490;
   }
   
   ::-webkit-scrollbar-thumb:hover {
@@ -193,7 +209,7 @@ a:hover {
 
   #page-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
     border: solid;
     border-style: solid;
     border-width: .5em;
@@ -205,6 +221,7 @@ a:hover {
   }
   
   #content-wrap {
+    padding: 1em;
   }
 
   .indexContent {
