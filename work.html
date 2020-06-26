@@ -32,7 +32,7 @@
 	<meta name="msapplication-config" content="faviconit/browserconfig.xml">
     <!-- ****** faviconit.com favicons ****** -->
 </head>
-    <body>
+    <body onload="filterContent">
         <div id="page-container">
             <div id="content-wrap">
                 <header>
@@ -47,36 +47,37 @@
         
 <div class="content">
                     <!--content-->
+
             
                     <div>
                         <p class="workHeader">
-                            here are some projects I'm proud of. </p>
+                            here are some projects I'm proud of.
+                        </p>
+                        <div id="myBtnContainer">
+                                <button class="btn active" onclick="filterSelection('all')">all</button>
+                                <button class="btn" onclick="filterSelection('videos')">videos</button>
+                                <button class="btn" onclick="filterSelection('development')">development</button>
+                                <button class="btn" onclick="filterSelection('design')">design</button>
+                                <button class="btn" onclick="filterSelection('other things')">other things</button>
+                        </div>
                         <ul class="workGrid">
-                            <li>
+                            <li class="filterDiv videos">
                                 <div>
                                     <a href= "projects/mtad.html"><img src="projects/projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
                                     <p class="workDetails">
                                         <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                        documentary <br>
-                                        May 25, 2020
+                                        videos // documentary <br>
+                                        May 25th, 2020
                                     </p>    
                                 </div>
                             </li>
-                            <li>
+                            <li class="filterDiv development">
                                 <div>
-                                    <a href= "projects/mtad.html"><img src="projects/projectThumbs/gcThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a>                    
-                                <p class="workDetails">
-                                    <strong>Gifted Kids are Cursed for Life</strong> <br>
-                                    documentary <br>
-                                </p>    
-                            </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href= "projects/mtad.html"><img src="projects/projectThumbs/ipThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
+                                    <a href= "projects/siteInfo.html"><img src="projects/projectThumbs/websiteThumb.png" alt="durj.tech" class="thumbnail"></a> <br>
                                     <p class="workDetails">
-                                        <strong>My Insatiable Thirst for Productivity</strong> <br>
-                                        documentary
+                                        <strong>durj.tech (this website)</strong> <br>
+                                        development // frontend <br>
+                                        July 1st, 2020
                                     </p>    
                                 </div>
                             </li>
@@ -94,5 +95,55 @@
                 </div>
             </div>
   </div>
+
+  <script>
+    filterSelection("all")
+  function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+  </script>
     </body>
 </html>

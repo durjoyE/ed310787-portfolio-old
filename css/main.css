@@ -2,7 +2,9 @@
 body {
     font-family: "PT Sans", sans-serif;
     background-image: url(/images/bg.png);
-    background-color: #1d1d1d;
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #1c1c1c;
     color: white;
     text-decoration: none;
     height: 100vh;
@@ -49,6 +51,39 @@ header {
     margin: 10px;
 }
 
+#myBtnContainer {
+  text-align: center;
+}
+
+.filterDiv {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border-radius: .5em;
+  border: none;
+  outline: none;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  background-color: #131313;
+  cursor: pointer;
+  text-align: center;
+  display: inline;  
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: white;
+  color: #a88add;
+  font-weight: 750;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -70,8 +105,7 @@ a:hover {
   }
 
   .footer p {
-    margin-top: .75em;
-    font-weight: bold;
+    margin-top: 1.25em;
     color: #505050;
   }
 
@@ -168,7 +202,6 @@ a:hover {
   }
 
   .workHeader {
-    margin-top: 1em;
     padding-bottom: 1em;
     font-size: larger;
     text-align: center;
@@ -198,6 +231,10 @@ a:hover {
     text-align: center;
     padding: 0;
     margin: 0;
+  }
+
+  .project .thumbnail {
+    width: 40%;
   }
 
   .workDetails {
