@@ -246,7 +246,8 @@ a:hover {
 
   .project .thumbnail {
     text-align: center;
-    width: 80%;
+    width: 55%;
+    padding-bottom: 1em;
   }
 
   .workDetails {
