@@ -257,23 +257,30 @@ a:hover {
     grid-gap: 0;
   }
 
+  .errorContent {
+    padding: 1em;
+  }
+
   .errorNum {
     display: block;
     text-align: center;
-    font-size: 6em;
+    font-size: 5em;
     color: #a88add;
-    
   }
 
   .error {
-    font-size: 2.75em;
+    font-size: 2em;
     text-align: center;
-    padding: .5em 1em 0 1em;
+    padding: 0;
   }
 
   .linkedin {
     text-align: center;
   }
+
+
+  /* media queries start here */
+
 
   @media only screen and (min-width: 500px)  {
 
@@ -358,12 +365,12 @@ a:hover {
     }
 
     .errorNum {
-      padding: 0;
       font-size: 8em;
     }
 
     .error {
-      font-size: 4.5em;
+      font-size: 2.5em;
+      padding-bottom: 2em;
     }
   }
 
