@@ -77,11 +77,31 @@ header {
   display: inline;  
 }
 
+.workGrid .projectDiv {
+  display: none;
+}
+
+.loadMore {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+#loadBtn {
+  border-radius: .5em;
+  border: none;
+  outline: none;
+  padding: 1em;
+  color: white;
+  background-color: #131313;
+  cursor: pointer;
+  text-align: center;
+  display: inline;
+}
+
 /* Add a dark background to the active button */
 .btn.active {
   background-color: white;
   color: #a88add;
-  font-weight: 750;
 }
 
 a {
@@ -210,16 +230,10 @@ a:hover {
   .workGrid {
     list-style: none;
     text-align: center;
-    padding: 0 2em 1em 2em;
+    padding: 1em 2em 1em 2em;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 2em;
-  }
-
-  .workGrid ul li img{
-    margin: 1em;
-    padding: 1em;
-    
   }
 
   .thumbnail {
