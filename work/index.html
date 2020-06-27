@@ -38,9 +38,6 @@
     <!--jQuery CDN package-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!--load more button js-->
-    <script src="/js/main.js"></script>
-
     <script> 
     $(function(){
       $("#workList").load("workList.html"); 
@@ -57,7 +54,7 @@
                 <ul class="navbar">
                     <li><a href="/">home</a></li>
                     <li><a href="" class="navActive">work</a></li>
-                    <li><a href="about">about</a></li>
+                    <li><a href="/about">about</a></li>
                     <li><a href="https://www.youtube.com/channel/UClBx-1UD2O615LAjlVEXyDQ" target="_blank" "><i class="icofont-youtube-play"></i></a></li>
                 </ul>
         
@@ -78,7 +75,7 @@
 
                         <div class="workGrid">
 
-                          <div class="projectDiv filterDiv development">
+                          <div class="filterDiv development">
                                 <a href= "siteInfo"><img src="projectThumbs/websiteThumb.png" alt="durj.tech" class="thumbnail"></a> <br>
                                 <p class="workDetails">
                                     <strong>durj.tech (this website)</strong> <br>
@@ -87,63 +84,7 @@
                                 </p>    
                           </div>
 
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
-                                  <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
-                                  <p class="workDetails">
-                                      <strong>My Time at Deepwater: a Retrospective</strong> <br>
-                                      videos // documentary <br>
-                                      May 25th, 2020
-                                  </p>    
-                          </div>
-                          <div class="projectDiv filterDiv videos">
+                          <div class="filterDiv videos">
                                   <a href= "mtad"><img src="projectThumbs/mtadThumb.png" alt="My Time at Deepwater: a Retrospective" class="thumbnail"></a> <br>
                                   <p class="workDetails">
                                       <strong>My Time at Deepwater: a Retrospective</strong> <br>
@@ -155,15 +96,13 @@
                         </div>
                           
                     </div>
-                    <div class="loadMore">
-  
-                        <button id="loadBtn">load more</button>
+                      <div class="loadMore">
+    
+                          <button id="loadBtn">load more</button>
 
-                    </div> 
+                      </div> 
                     </div>
 
-                    
-            
                     <!--content-->
 </div>
         
@@ -177,7 +116,8 @@
   </div>
 
   <script>
-    filterSelection("all")
+
+  filterSelection("all");
   function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
@@ -224,10 +164,26 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+    //load more button js
+
+    $(".filterDiv").slice(0,6).show();
+
+    if ($(".filterDiv:hidden").length > 6){
+        $("#loadBtn:hidden").show();
+    }
+    
+    $("#loadBtn").on('click', function() {
+    
+            $(".filterDiv:hidden").slice(0,3).fadeIn();
+            $(document).scrollTop($(document).height());    
+    
+        if ($(".filterDiv:hidden").length === 0){
+            $("#loadBtn").fadeOut();
+        }
+    });
+
   </script>
-
-</script> 
-
 
     </body>
 </html>

@@ -77,10 +77,6 @@ header {
   display: inline;  
 }
 
-.workGrid .projectDiv {
-  display: none;
-}
-
 .loadMore {
   text-align: center;
   padding-bottom: 2em;
@@ -96,6 +92,7 @@ header {
   cursor: pointer;
   text-align: center;
   display: inline;
+  display: none;
 }
 
 /* Add a dark background to the active button */
@@ -160,21 +157,21 @@ a:hover {
     font-size: 1.1em;
   }
 
-  .latestProject {
+  .featuredProject {
     text-align: center;
     display: grid;
     grid-template-columns: 60% 40%;
     column-gap: 1em;
   }
 
-  .latestProject big {
+  .featuredProject big {
     display: block;
     text-align: left;
     font-weight: bolder;
     font-size: medium;
   }
 
-  .latestProject h1 {
+  .featuredProject h1 {
     margin: 0;
     margin-right: 1em;
     padding-bottom: .25em;
@@ -184,7 +181,7 @@ a:hover {
     line-height: 1em;
   }
 
-  .latestDetails {
+  .featuredDetails {
     display: block;
     text-align: left;
     margin: 0;
@@ -194,7 +191,7 @@ a:hover {
     margin-right: .5em;
   }
 
-  .latestInfo {
+  .featuredInfo {
     display: block;
     width: 100%;  
     text-align: left;
@@ -329,7 +326,7 @@ a:hover {
       padding-bottom: 1em;
     }
 
-    .latestProject big {
+    .featuredProject big {
       font-size: 2em;
     }
 
@@ -345,7 +342,7 @@ a:hover {
       font-size: xx-large;
     }
 
-    .latestProject h1 {
+    .featuredProject h1 {
       margin: 0;
       padding-right: 1em;
       padding-bottom: .25em;
@@ -374,7 +371,7 @@ a:hover {
       font-size: x-large;
     }
 
-    .latestDetails {
+    .featuredDetails {
       font-size: 1em;
     }
 
@@ -431,19 +428,19 @@ a:hover {
       font-size: .5em;
     }
 
-    .latestProject {
+    .featuredProject {
       column-gap: 1.25em;
     }
 
-    .latestProject h1 {
+    .featuredProject h1 {
       text-align: left;
     }
 
-    .latestDetails {
+    .featuredDetails {
       font-size: 1em;
     }
 
-    .latestInfo {
+    .featuredInfo {
       padding: 0%;
       font-size: 1.25em;
     }
@@ -466,11 +463,11 @@ a:hover {
   
   @media only screen and (min-width: 1320px)  {
 
-    .latestProject {
+    .featuredProject {
       column-gap: 2em;
     }
 
-    .latestProject h1 {
+    .featuredProject h1 {
       font-size: 2.5em;
     }
 
