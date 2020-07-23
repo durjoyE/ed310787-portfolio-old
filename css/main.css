@@ -54,7 +54,7 @@ header {
 }
 
 .content {
-  padding: 1em 0 1em 0;
+  padding: 1em 10% 1em 10%;
 }
 
 #myBtnContainer {
@@ -139,6 +139,7 @@ a:hover {
   .moreLink {
     text-decoration: underline;
     font-size: large;
+    padding-bottom: 1em;
   }
 
   .emLink{
@@ -169,7 +170,6 @@ a:hover {
   .indexGrid {
     display: flex;
     flex-direction: column;
-    padding: 0 .75em 0 .75em;
   }
 
   .introBlurb {
@@ -207,7 +207,7 @@ a:hover {
     font-family: "Merriweather", serif;
   }
 
-  .projectDetails {
+  .featuredDetails {
     display: block;
     text-align: left;
     margin: 0;
@@ -219,7 +219,7 @@ a:hover {
     display: block;
     width: 100%;  
     text-align: left;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   ::-webkit-scrollbar {
@@ -246,7 +246,7 @@ a:hover {
     padding: 0 .75em 0 .75em;
   }
 
-  .workHeader {
+  .pageHeader {
     padding-bottom: .5em;
     font-size: x-large;
     text-align: center;
@@ -268,14 +268,12 @@ a:hover {
     text-align: center;
   }
 
-  .projectContent {
-    padding: 0 3em 0 1em;
-  }
-
-  .projectContent h2 {
+  .projectName {
     text-align: center;
-    font-size: xx-large;
+    font-size: 2em;
     margin-top: 0;
+    color: #a88add;
+    font-family: "Merriweather", serif;
   }
 
   .projectHeader {
@@ -283,16 +281,8 @@ a:hover {
     padding: 0;
     margin: 0;
     display: flex;
-  }
-
-  .projectHeader .thumbnail {
-    flex: 20%;
-  }
-
-  .projectHeader .projectDetails {
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
+    flex-direction: column;
+    column-gap: 1em;
   }
 
   .workDetails {
@@ -303,14 +293,10 @@ a:hover {
     min-height:100%;
     position:relative;
   }
-  
-  .content {
-    padding: 0 1em 50px 1em;
 
-  }
 
   .errorContent {
-    padding: 1em;
+    padding: 0;
   }
 
   .errorNum {
@@ -326,10 +312,19 @@ a:hover {
     padding: 0;
   }
 
-  .linkedin {
-    text-align: center;
+  .errorContent img {
+    width: 70%;
   }
 
+  .errorContent div {
+    text-align: right;
+  }
+
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 2;
+  }
 
   /* media queries start here */
 
@@ -358,7 +353,7 @@ a:hover {
     }
 
     .intro {
-      font-size: 1.25em;
+      font-size: 1.75em;
     }
 
     .introBlurb {
@@ -371,7 +366,7 @@ a:hover {
       font-size: 2em;
     }
 
-    .projectDetails {
+    .featuredDetails {
       font-size: 1.5em;
     }
 
@@ -386,6 +381,7 @@ a:hover {
     .project h2 {
       font-size: xx-large;
     }
+    
 
     .featuredProject h1 {
       margin: 0;
@@ -404,9 +400,7 @@ a:hover {
     }
 
     .intro {
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1; 
+      font-size: 1.5em;
     }
 
     .navbar li a {
@@ -425,13 +419,14 @@ a:hover {
     .name {
       text-align: left;
       width: 8em;
+      font-size: 2.25em;
     }
     
     .navbar {
       padding-bottom: 1em;
     }
 
-    .workHeader {
+    .pageHeader {
       font-size: x-large;
     }
 
@@ -445,7 +440,7 @@ a:hover {
 
     .error {
       font-size: 2.5em;
-      padding-bottom: 2em;
+      padding-bottom: 0;
     }
   }
 
@@ -469,7 +464,7 @@ a:hover {
 
     .intro {
       text-align: left;
-      font-size: 2em;
+      font-size: 2.5em;
       display: flex;
       flex-direction: row;
       flex-grow: 1;
@@ -493,10 +488,6 @@ a:hover {
       padding-right: .5em;
     }
 
-    .content {
-      padding: 0em 3em 50px 3em;
-    }
-
     .fpHeader {
     padding-top: 1em;
     font-size: 2em;
@@ -511,8 +502,12 @@ a:hover {
       padding: 0 0 0 32px;
     }
 
-    .projectDetails {
-      font-size: 2em;
+    .projectName {
+      font-size: 2.5em;
+    }
+
+    .featuredDetails {
+      font-size: 1.75em;
       padding-left: 32px;
     }
 
@@ -523,6 +518,7 @@ a:hover {
 
     .moreLink {
       text-align: center;
+
     }
 
     .thumbnail {
@@ -535,7 +531,7 @@ a:hover {
     }
 
     .error {
-      font-size: 5em;
+      font-size: 4em;
     }
 
   }
@@ -553,6 +549,27 @@ a:hover {
 
     .introBlurb {
       text-align: left;
+
+    }
+
+    .content {
+      padding: 0em 15% 50px 15%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1800px)  {
+
+    .introBlurb{
+      font-size: 1.25em;
+    }
+
+    .featuredProject h1 {
+      font-size: 3em;
+    }
+
+    .featuredDetails {
+      font-size: 2em;
     }
 
   }
@@ -564,7 +581,7 @@ a:hover {
     }
 
     .error {
-      font-size: 6em;
+      font-size: 5em;
     }
 
   }
