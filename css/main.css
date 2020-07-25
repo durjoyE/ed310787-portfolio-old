@@ -46,7 +46,7 @@ header {
     list-style: none;
     text-decoration: none;
     margin: 0;
-    padding: 0 0 15px 0;
+    padding: 0 0 5px 0;
 }
 
 .navbar li a {
@@ -54,7 +54,7 @@ header {
 }
 
 .content {
-  padding: 1em 10% 1em 10%;
+  padding: 1em 5% 1em 5%;
 }
 
 #myBtnContainer {
@@ -110,15 +110,14 @@ header {
 }
 
 a {
-    color: white;
+    color: #a88add;
     text-decoration: none;
     transition-property: color;
-    transition-duration: .1s;
+    transition-duration: .2s;
 }
 
 a:hover {
     color: #897c80;
-    text-decoration: none;
 }
 
 .footer {
@@ -148,11 +147,12 @@ a:hover {
   }
 
   .name {
-    color: #0eb490;
+    color: #fff;
     font-weight: 900;
     font-size: 1.75em;
     text-align: center;
     display: block;
+    width: auto;
     margin: 0;
     font-family: "Merriweather", serif;
   }
@@ -197,9 +197,10 @@ a:hover {
     font-family: "Merriweather", serif;
   }
 
-  .featuredProject h1 {
+  .projectName {
+    padding-bottom: .25em;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #a88add;
     text-align: left;
     line-height: 1em;
@@ -247,11 +248,17 @@ a:hover {
   }
 
   .pageHeader {
-    padding-bottom: .5em;
-    font-size: x-large;
+    padding: .5em 0 .5em 0;
+    font-size: 1.5em;
     text-align: center;
     font-family: "Merriweather", serif;
     font-weight: 600;
+  }
+
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 2;
   }
 
   .workGrid {
@@ -268,12 +275,10 @@ a:hover {
     text-align: center;
   }
 
-  .projectName {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 0;
-    color: #a88add;
-    font-family: "Merriweather", serif;
+  .projectInfo {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
   }
 
   .projectHeader {
@@ -289,11 +294,25 @@ a:hover {
     margin-bottom: 1em;
   }
 
+  .tableHeader {
+    color: #0eb490;
+    font-size: 2em;
+  }
+
+  .caseStudy {
+    font-size: 1.5em;
+  }
+
+  .projectFacts th, td {
+    padding: 7px;
+    font-size: 1.5em;
+    text-align: left;
+  }
+
   #page-container {
     min-height:100%;
     position:relative;
   }
-
 
   .errorContent {
     padding: 0;
@@ -320,10 +339,10 @@ a:hover {
     text-align: right;
   }
 
-  .aboutContent {
+  .emailForm {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 2;
+    font-size: larger;
   }
 
   /* media queries start here */
@@ -383,10 +402,8 @@ a:hover {
     }
     
 
-    .featuredProject h1 {
+    .projectName {
       margin: 0;
-      padding-right: 1em;
-      padding-bottom: .25em;
       font-size: 2em;
       color: #a88add;
       text-align: left;
@@ -419,7 +436,7 @@ a:hover {
     .name {
       text-align: left;
       width: 8em;
-      font-size: 2.25em;
+      font-size: 3em;
     }
     
     .navbar {
@@ -427,7 +444,15 @@ a:hover {
     }
 
     .pageHeader {
-      font-size: x-large;
+      font-size: 2em;
+    }
+
+    .projectInfo {
+      flex-direction: row;
+    }
+
+    .caseStudy {
+      padding-left: 50px;
     }
 
     .featuredDetails {
@@ -497,18 +522,13 @@ a:hover {
       flex-direction: row;
     }
 
-    .featuredProject h1 {
-      text-align: left;
-      padding: 0 0 0 32px;
-    }
-
     .projectName {
-      font-size: 2.5em;
+      text-align: left;
+      font-size: 3em;
     }
 
     .featuredDetails {
       font-size: 1.75em;
-      padding-left: 32px;
     }
 
     .featuredInfo {
@@ -543,17 +563,20 @@ a:hover {
       column-gap: 2em;
     }
 
-    .featuredProject h1 {
-      font-size: 2.5em;
+    .projectName {
+      font-size: 4em;
     }
 
     .introBlurb {
       text-align: left;
-
     }
 
     .content {
-      padding: 0em 15% 50px 15%;
+      padding: 0em 10% 50px 10%;
+    }
+
+    .caseStudy {
+      padding-left: 50px;
     }
 
   }
@@ -564,8 +587,8 @@ a:hover {
       font-size: 1.25em;
     }
 
-    .featuredProject h1 {
-      font-size: 3em;
+    .projectName {
+      font-size: 5em;
     }
 
     .featuredDetails {
