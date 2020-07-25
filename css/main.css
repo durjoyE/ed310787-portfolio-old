@@ -46,7 +46,6 @@ header {
   list-style: none;
   text-decoration: none;
   margin: 0;
-  padding: 0 0 1em 0;
 }
 
 .navbar li a {
@@ -138,7 +137,7 @@ a:hover {
 
   .moreLink {
     text-decoration: underline;
-    font-size: 2em;
+    font-size: .5em;
     padding-bottom: 1em;
   }
 
@@ -152,8 +151,8 @@ a:hover {
     font-weight: 900;
     font-size: 1.75em;
     text-align: center;
-    display: block;
-    width: auto;
+    display: inline;
+    width: 8em;
     margin: 0;
     font-family: "Merriweather", serif;
   }
@@ -174,7 +173,6 @@ a:hover {
   }
 
   .introBlurb {
-    margin: 1em 0 1em 0;
     text-align: center;
     font-size: 1em;
     line-height: normal;
@@ -201,7 +199,7 @@ a:hover {
   .projectName {
     padding-bottom: .25em;
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #a88add;
     text-align: left;
     line-height: 1em;
@@ -278,7 +276,7 @@ a:hover {
   }
 
   .projectInfo {
-    padding-top: 3em;
+    padding-top: .5em;
     display: flex;
     flex-direction: column;
   }
@@ -307,7 +305,7 @@ a:hover {
 
   .projectFacts th, td {
     padding: 7px;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: left;
   }
 
@@ -437,8 +435,9 @@ a:hover {
 
     .name {
       text-align: left;
-      width: 8em;
-      font-size: 3em;
+      width: 9em;
+      line-height: 1em;
+      padding-right: .5em;
     }
     
     .navbar {
@@ -449,7 +448,12 @@ a:hover {
       font-size: 2em;
     }
 
+    .projectFacts th, td {
+      font-size: 2em;
+    }
+
     .projectInfo {
+      padding-top: 2em;
       flex-direction: row;
     }
 
@@ -509,16 +513,6 @@ a:hover {
       flex-grow: 1;
     }    
 
-    .name {
-      text-align: left;
-      font-size: 2..25em;
-      width: 8em;
-      display: block;
-      line-height: 1em;
-      flex-grow: 1;
-      padding-right: .5em;
-    }
-
     .fpHeader {
     padding-top: 1em;
     font-size: 2em;
@@ -544,7 +538,7 @@ a:hover {
 
     .moreLink {
       text-align: center;
-
+      font-size: 2em;
     }
 
     .thumbnail {
