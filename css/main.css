@@ -40,13 +40,13 @@ header {
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 0 1em 0;
 }
 
 .navbar li a {
@@ -73,6 +73,7 @@ header {
 
 /* Style the buttons */
 .btn {
+  font: "Open Sans", sans-serif;
   font-size: small;
   border-radius: .5em;
   border: none;
@@ -110,7 +111,7 @@ header {
 }
 
 a {
-    color: #a88add;
+    color: white;
     text-decoration: none;
     transition-property: color;
     transition-duration: .2s;
@@ -137,7 +138,7 @@ a:hover {
 
   .moreLink {
     text-decoration: underline;
-    font-size: large;
+    font-size: 2em;
     padding-bottom: 1em;
   }
 
@@ -217,10 +218,11 @@ a:hover {
   }
 
   .featuredInfo {
-    display: block;
+    display: inline-block;
     width: 100%;  
     text-align: left;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
+    padding-top: .25em;
   }
 
   ::-webkit-scrollbar {
@@ -485,6 +487,10 @@ a:hover {
 
     .workGrid {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .btn {
+      font-size: x-large;
     }
 
     .intro {
