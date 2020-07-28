@@ -246,10 +246,6 @@ a:hover {
       color: #a88add;
   }
 
-  .workContent {
-    padding: 0 .75em 0 .75em;
-  }
-
   .pageHeader {
     padding: .5em 0 .5em 0;
     font-size: 1.5em;
@@ -275,8 +271,14 @@ a:hover {
   .thumbnail {
     box-sizing: border-box;
     width: 100%;
-    text-align: center;
+	text-align: center;
+	-webkit-transition: all .25s cubic-bezier(.08,.58,.33,.85);
+    transition: all .25s cubic-bezier(.08,.58,.33,.85);
   }
+
+  .workContent .thumbnail:hover {
+	-webkit-filter: brightness(40%) blur(6px);
+}
 
   .projectInfo {
     padding-top: .5em;
@@ -308,6 +310,44 @@ a:hover {
     padding: 7px;
     font-size: 1em;
     text-align: left;
+  }
+
+  .errorHeader {
+	color: #898989;
+    font-size: 2em;
+	font-family: "Merriweather", serif;
+	background: none;
+	outline: none;
+	border: 0;
+  }
+
+  .collapsible {
+	padding: 7px;
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+  }
+  
+  .activeCollapse, .collapsible:hover {
+	color: #ccc;
+  }
+
+  .collapsible:after {
+	content: '\25BC'; 
+	font-size: .75em;
+	float: right;
+}
+  
+  .activeCollapse:after {
+	content: "\25b2"; 
+  }
+  
+  .collapseContent { 
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .5s cubic-bezier(.08,.58,.33,.85);
   }
 
   .caseStudy h2 {
