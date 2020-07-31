@@ -12,10 +12,10 @@ body {
     margin: 0 auto 0 auto;
     word-spacing: normal;
     overflow-x: hidden;
-  }
+}
 
 html {
-  height: 100vh;
+    height: 100vh;
 }
 
 p {
@@ -40,72 +40,84 @@ header {
 }
 
 .navbar {
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
 }
 
 .navbar li a {
     margin: 10px;
 }
 
-
+.hero {
+    width: 100%;
+    padding: 75px 0;
+    text-align: center;
+    color: white;
+}
 
 #myBtnContainer {
-  text-align: center;
-  padding-bottom: 1em;
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 .filterDiv {
-  display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
 }
+
 
 /* The "show" class is added to the filtered elements */
+
 .show {
-  display: block;
+    display: block;
 }
 
+
 /* Style the buttons */
+
 .btn {
-  font: "Open Sans", sans-serif;
-  font-size: small;
-  border-radius: .5em;
-  border: none;
-  outline: none;
-  padding: 5px 5px 5px 5px;
-  color: white;
-  background-color: #131313;
-  cursor: pointer;
-  text-align: center;
-  display: inline;  
+    font: "Open Sans", sans-serif;
+    font-size: small;
+    border-radius: .5em;
+    border: none;
+    outline: none;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    background-color: #131313;
+    cursor: pointer;
+    text-align: center;
+    display: inline;
 }
 
 .loadMore {
-  text-align: center;
-  padding-bottom: 2em;
+    text-align: center;
+    padding-bottom: 2em;
 }
 
 #loadBtn {
-  border-radius: .5em;
-  border: none;
-  outline: none;
-  padding: 1em;
-  color: white;
-  background-color: #131313;
-  cursor: pointer;
-  text-align: center;
-  display: inline;
-  display: none;
+    border-radius: .5em;
+    border: none;
+    outline: none;
+    padding: 1em;
+    color: white;
+    background-color: #131313;
+    cursor: pointer;
+    text-align: center;
+    display: inline;
+    display: none;
 }
 
+
 /* Add a dark background to the active button */
+
 .btn.active {
-  background-color: #a88add;
-  color: white;
+    background-color: #a88add;
+    color: white;
 }
 
 a {
@@ -120,7 +132,7 @@ a:hover {
 }
 
 .content {
-  padding: 1em 10% 75px 10%;
+    padding: 1em 10% 75px 10%;
 }
 
 .footer {
@@ -130,26 +142,26 @@ a:hover {
     height: 75px;
     background-color: #131313;
     text-align: center;
-  }
+}
 
-  .footer p {
+.footer p {
     margin-top: 25px;
     color: #505050;
     font-size: 1em;
-  }
+}
 
-  .moreLink {
+.moreLink {
     text-decoration: underline;
     font-size: .5em;
     padding-bottom: 1em;
-  }
+}
 
-  .emLink{
+.emLink {
     text-decoration: underline;
     color: #a88add;
-  }
+}
 
-  .name {
+.name {
     color: #fff;
     font-weight: 900;
     font-size: 1.75em;
@@ -158,48 +170,49 @@ a:hover {
     width: 8em;
     margin: 0;
     font-family: "Merriweather", serif;
-  }
+}
 
-  .intro {
+.intro {
     text-align: center;
     font-size: 1.25em;
     line-height: 1.5em;
-  }
+}
 
-  .intro strong {
+.intro strong {
     font-family: "Merriweather", serif;
-  }
-  
-  .indexGrid {
+}
+
+.indexGrid {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .introBlurb {
+.introBlurb {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.25em;
     line-height: normal;
     height: inherit;
     max-lines: 4;
-  }
+    padding-bottom: 1em;
+}
 
-  .featuredProject {
+.featuredProject {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
     column-gap: 1em;
-  }
+}
 
-  .fpHeader {
+.fpHeader {
     padding-bottom: .25em;
     display: block;
     text-align: left;
     font-weight: 600;
     font-size: large;
     font-family: "Merriweather", serif;
-  }
+}
 
-  .projectName {
+.projectName {
     padding-bottom: .25em;
     margin: 0;
     font-size: 1.5em;
@@ -208,462 +221,376 @@ a:hover {
     line-height: 1em;
     font-weight: 800;
     font-family: "Merriweather", serif;
-  }
+}
 
-  .featuredDetails {
+.featuredDetails {
     display: block;
     text-align: left;
     margin: 0;
     padding: 0;
     font-size: 1em;
-  }
+}
 
-  .featuredInfo {
+.featuredInfo {
     display: inline-block;
-    width: 100%;  
+    width: 100%;
     text-align: left;
     padding-bottom: 1em;
     padding-top: .25em;
-  }
+}
 
-  ::-webkit-scrollbar {
+ ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+ ::-webkit-scrollbar-track {
     background: #1d1d1d;
-  }
+}
 
-  ::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
     background: #0eb490;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+ ::-webkit-scrollbar-thumb:hover {
     background: #898989;
-  }
+}
 
-  .navActive {
-      color: #a88add;
-  }
+.navActive {
+    color: #a88add;
+}
 
-  .pageHeader {
+.pageHeader {
     padding: .5em 0 .5em 0;
     font-size: 1.5em;
     text-align: center;
     font-family: "Merriweather", serif;
     font-weight: 600;
-  }
+}
 
-  .aboutContent {
+.aboutContent {
     display: flex;
     flex-direction: column;
     grid-template-columns: 2;
-  }
+}
 
-  .workGrid {
+.workGrid {
     list-style: none;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 2em;
-  }
-
-  .thumbnail {
-    box-sizing: border-box;
-    width: 100%;
-	text-align: center;
-	-webkit-transition: all .25s cubic-bezier(.08,.58,.33,.85);
-    transition: all .25s cubic-bezier(.08,.58,.33,.85);
-  }
-
-  .workContent .thumbnail:hover {
-	-webkit-filter: brightness(40%) blur(6px);
 }
 
-  .projectInfo {
+.thumbnail {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.projectInfo {
     padding-top: .5em;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .projectHeader {
+.projectHeader {
     text-align: center;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     column-gap: 1em;
-  }
+}
 
-  .workDetails {
+.workDetails {
     margin-bottom: 1em;
-  }
+}
 
-  .tableHeader {
+.tableHeader {
     color: #0eb490;
     font-size: 2em;
     font-family: "Merriweather", serif;
-  }
+}
 
-  .projectFacts th, td {
+.projectFacts th,
+td {
     padding: 7px;
     font-size: 1em;
     text-align: left;
-  }
-
-  .errorHeader {
-	color: #898989;
-    font-size: 2em;
-	font-family: "Merriweather", serif;
-	background: none;
-	outline: none;
-	border: 0;
-  }
-
-  .collapsible {
-	padding: 7px;
-	cursor: pointer;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-  }
-  
-  .activeCollapse, .collapsible:hover {
-	color: #ccc;
-  }
-
-  .collapsible:after {
-	content: '\25BC'; 
-	font-size: .75em;
-	float: right;
 }
-  
-  .activeCollapse:after {
-	content: "\25b2"; 
-  }
-  
-  .collapseContent { 
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height .5s cubic-bezier(.08,.58,.33,.85);
-  }
 
-  .caseStudy h2 {
+.errorHeader {
+    color: #898989;
+    font-size: 1em;
+    font-family: "Merriweather", serif;
+    background: none;
+    outline: none;
+    border: 0;
+}
+
+.collapsible {
+    padding: 7px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.activeCollapse,
+.collapsible:hover {
+    color: #ccc;
+}
+
+.collapsible:after {
+    content: '\25BC';
+    font-size: .75em;
+    float: right;
+}
+
+.activeCollapse:after {
+    content: "\25b2";
+}
+
+.collapseContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s cubic-bezier(.08, .58, .33, .85);
+}
+
+.caseStudy h2 {
     margin: 0;
     padding-top: 1em;
     font-family: "Merriweather", serif;
-  }
+}
 
-  .caseStudy p {
+.caseStudy p {
     font-size: 1em;
     line-height: 1.5em;
-  }
+}
 
-  #page-container {
-    min-height:100%;
-    position:relative;
-  }
+#page-container {
+    min-height: 100%;
+    position: relative;
+}
 
-  .errorContent {
+.errorContent {
     padding: 0;
-  }
+}
 
-  .errorNum {
+.errorNum {
     display: block;
     text-align: center;
     font-size: 5em;
     color: #a88add;
-  }
+}
 
-  .error {
+.error {
     font-size: 2em;
     text-align: center;
     padding: 0;
-  }
+}
 
-  .errorContent img {
+.errorContent img {
     width: 70%;
-  }
+}
 
-  .errorContent div {
+.errorContent div {
     text-align: right;
-  }
+}
 
-  .emailForm {
+.emailForm {
     display: flex;
     flex-direction: column;
     font-size: larger;
-  }
-
-  /* media queries start here */
+}
 
 
-  @media only screen and (min-width: 500px)  {
+/* media queries start here */
 
+@media only screen and (min-width: 500px) {
     header {
-      height: 125px;
+        height: 125px;
     }
+}
 
-  }
-
-  @media only screen and (min-width: 650px)  {
-
+@media only screen and (min-width: 650px) {
     header {
-      height: 150px;
+        height: 150px;
     }
-
     .navbar li a {
-      margin: 15px;
-      font-size: large;
+        margin: 15px;
+        font-size: large;
     }
-
     p {
-      font-size: 1.2em;
+        font-size: 1.2em;
     }
-
     .intro {
-      font-size: 1.75em;
+        font-size: 1.75em;
     }
-
     .introBlurb {
-      font-size: 1.25em;
-      padding-top: 0;
-      padding-bottom: 1em;
+        font-size: 1em;
+        padding-top: 0;
+        padding-bottom: 1em;
     }
-
     .featuredProject big {
-      font-size: 2em;
+        font-size: 2em;
     }
-
     .featuredDetails {
-      font-size: 1.5em;
+        font-size: 1.5em;
     }
+}
 
-  }
-
-  @media only screen and (min-width: 750px)  {
-
+@media only screen and (min-width: 750px) {
     .workGrid {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
     .project h2 {
-      font-size: xx-large;
+        font-size: xx-large;
     }
-    
-
     .projectName {
-      margin: 0;
-      font-size: 2em;
-      color: #a88add;
-      text-align: left;
+        margin: 0;
+        font-size: 2em;
+        color: #a88add;
+        text-align: left;
     }
-  }
+}
 
-  @media only screen and (min-width: 850px)  {
-
+@media only screen and (min-width: 850px) {
     header {
-      height: 200px;
+        height: 125px;
     }
-
-    .intro {
-      font-size: 1.5em;
-    }
-
     .navbar li a {
-      margin: 20px;
-      font-size: x-large;
+        margin: 20px;
+        font-size: x-large;
     }
-
-    .intro {
-      text-align: left;
-    }
-
-    .introBlurb {
-      text-align: left;
-    }
-
     .name {
-      text-align: left;
-      width: 9em;
-      line-height: 1em;
-      padding-right: .5em;
+        text-align: left;
+        width: 9em;
+        line-height: 1em;
+        padding-right: .5em;
     }
-    
     .navbar {
-      padding-bottom: 1em;
+        padding-bottom: 1em;
     }
-
     .pageHeader {
-      font-size: 2em;
+        font-size: 2em;
     }
-
-    .projectFacts th, td {
-      font-size: 2em;
+    .projectFacts th,
+    td {
+        font-size: 1em;
     }
-
     .caseStudy h2 {
-      padding: 0;
+        padding: 0;
     }
-
     .projectInfo {
-      padding-top: 2em;
-      flex-direction: row;
+        padding-top: 2em;
+        flex-direction: row;
     }
-
     .caseStudy {
-      padding-left: 50px;
-      font-size: 2em;
+        padding-left: 50px;
+        font-size: 1em;
     }
-
     .featuredDetails {
-      font-size: 1em;
+        font-size: 1em;
     }
-
     .errorNum {
-      font-size: 8em;
+        font-size: 8em;
     }
-
     .error {
-      font-size: 2.5em;
-      padding-bottom: 0;
+        font-size: 2.5em;
+        padding-bottom: 0;
     }
-  }
+}
 
-  @media only screen and (min-width: 1100px)  {
-
+@media only screen and (min-width: 1100px) {
     header {
-      height: 125px;
+        height: 125px;
     }
-
     .logo {
-      padding: .5em;
+        padding: .5em;
     }
-
     .navbar {
-      padding-bottom: 1.5em;
+        padding-bottom: 1.5em;
     }
-
+    .navbar li a {
+        font-size: medium;
+    }
     .workGrid {
-      grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-
     .btn {
-      font-size: x-large;
+        font-size: medium;
     }
-
     .footer p {
-      margin-top: 20px;
-      color: #505050;
-      font-size: 2em;
+        margin-top: 25px;
+        color: #505050;
+        font-size: 1em;
     }
-
-    .intro {
-      text-align: left;
-      font-size: 2.5em;
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1;
-    }
-
     .introBlurb {
-      text-align: left;
-      padding: 0;
-      font-size: .7em;
-      margin: 0;
-      flex-grow: 1;
-    }    
-
+        font-size: 1.25em;
+    }
     .fpHeader {
-    padding-top: 1em;
-    font-size: 2em;
+        padding-top: 1em;
+        font-size: 2em;
     }
-
     .featuredProject {
-      flex-direction: row;
+        flex-direction: row;
     }
-
     .projectName {
-      text-align: left;
-      font-size: 3em;
+        text-align: left;
+        font-size: 3em;
     }
-
     .featuredDetails {
-      font-size: 1.75em;
+        font-size: 1.75em;
     }
-
     .featuredInfo {
-      padding: 0%;
-      font-size: 1.75em;
+        padding: 0%;
+        font-size: 1.75em;
     }
-
     .moreLink {
-      text-align: center;
-      font-size: 2em;
+        text-align: center;
+        font-size: 2em;
     }
-
     .thumbnail {
-      width: 100%;
+        width: 100%;
     }
-
     .errorNum {
-      padding: 0;
-      font-size: 8em;
+        padding: 0;
+        font-size: 8em;
     }
-
     .error {
-      font-size: 4em;
+        font-size: 4em;
     }
+}
 
-  }
-
-  
-  @media only screen and (min-width: 1320px)  {
-
+@media only screen and (min-width: 1320px) {
     .featuredProject {
-      column-gap: 2em;
+        column-gap: 2em;
     }
-
     .projectName {
-      font-size: 4em;
+        font-size: 3em;
     }
-
-    .introBlurb {
-      text-align: left;
-    }
-
     .content {
-      padding: 0em 10% 200px 10%;
+        padding: 0em 10% 200px 10%;
     }
+}
 
-  }
-
-  @media only screen and (min-width: 1800px)  {
-
-    .introBlurb{
-      font-size: 1.25em;
-    }
-
+@media only screen and (min-width: 1800px) {
     .projectName {
-      font-size: 5em;
+        font-size: 3.5em;
     }
-
     .featuredDetails {
-      font-size: 2em;
+        font-size: 2em;
     }
+}
 
-  }
-
-  @media only screen and (min-width: 2560px)  {
-
+@media only screen and (min-width: 2560px) {
     .workGrid {
-      grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
-
     .error {
-      font-size: 5em;
+        font-size: 5em;
     }
-
-  }
+}
