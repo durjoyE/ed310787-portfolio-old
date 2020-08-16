@@ -273,6 +273,14 @@ a:hover {
     grid-template-columns: 2;
 }
 
+.aboutContent table {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .workGrid {
     list-style: none;
     text-align: center;
@@ -368,6 +376,10 @@ td {
 .caseStudy p {
     font-size: 1em;
     line-height: 1.5em;
+}
+
+.appLab {
+    text-align: center;
 }
 
 #page-container {
@@ -540,7 +552,7 @@ td {
     }
     .projectName {
         text-align: left;
-        font-size: 3em;
+        font-size: 2em;
     }
     .featuredDetails {
         font-size: 1.75em;
@@ -556,12 +568,20 @@ td {
     .thumbnail {
         width: 100%;
     }
+    .projectHeader {
+        width: 80%;
+        margin: 0 auto;
+    }
     .errorNum {
         padding: 0;
         font-size: 8em;
     }
     .error {
         font-size: 4em;
+    }
+
+    .projectInfo {
+        font-size: 1.25em;
     }
 }
 
@@ -570,16 +590,17 @@ td {
         column-gap: 2em;
     }
     .projectName {
-        font-size: 3em;
+        font-size: 2.25em;
+        text-align: left;
     }
     .content {
-        padding: 0em 10% 200px 10%;
+        padding: 0em 20% 200px 20%;
     }
 }
 
 @media only screen and (min-width: 1800px) {
     .projectName {
-        font-size: 3.5em;
+        font-size: 3em;
     }
     .featuredDetails {
         font-size: 2em;
