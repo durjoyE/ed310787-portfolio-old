@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project title</title>
+    <title></title>
     <link rel="stylesheet" href="/css/main.css">
 
     <!--icon font from icofont-->
     <link rel="stylesheet" href="/icofont/icofont.min.css">
     
     <!-- ****** faviconit.com favicons ****** -->
-    <link rel="shortcut icon" href="/faviconit/favicon.ico">
+	<link rel="shortcut icon" href="/faviconit/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/faviconit/favicon.ico">
 	<link rel="icon" type="image/png" sizes="196x196" href="/faviconit/favicon-192.png">
 	<link rel="icon" type="image/png" sizes="160x160" href="/faviconit/favicon-160.png">
@@ -31,30 +31,140 @@
 	<meta name="msapplication-TileImage" content="/faviconit/favicon-144.png">
 	<meta name="msapplication-config" content="/faviconit/browserconfig.xml">
     <!-- ****** faviconit.com favicons ****** -->
+
+    <!--jQuery CDN package-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
     <body>
-        <header>
-            <img src="/images/main_white.svg" alt="site logo" class="logo">
-        </header>
-        <ul class="navbar">
-            <li><a href="/index.html">home</a></li>
-            <li><a href="/work.html" class="navActive">work</a></li>
-            <li><a href="/about.html">about</a></li>
-            <li><a href="https://www.youtube.com/channel/UClBx-1UD2O615LAjlVEXyDQ" target="_blank" "><i class="icofont-youtube-play"></i></a></li>
-        </ul>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header>
+                    <img src="/images/Main_white.svg" alt="site logo" class="logo">
+                </header>
+                <ul class="navbar">
+                    <li><a href="/">home</a></li>
+                    <li><a href="/work" class="navActive">work</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="https://www.youtube.com/channel/UClBx-1UD2O615LAjlVEXyDQ" target="_blank" "><i class="icofont-youtube-play"></i></a></li>
+                </ul>
+                
+<div class="content">
+                    <!--content-->
+                    <div class="projectHeader"> <!--project thumbnail-->    
 
-        <!--content-->
+                        <h2 class="projectName"></h2>
+                        <img src="../projectThumbs/" alt="Project thumbnail" class="thumbnail"> <!--project thumbnail-->
 
-        <div>
+                    </div>
 
+                    <div class="projectInfo">
+
+                        <div class="projectFacts">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 40%;">
+                                    <col style="width: 60%;">
+                                </colgroup>
+                                <tr>
+                                    <th colspan="2" class="tableHeader">project overview</th>
+                                </tr>
+                                <tr>
+                                    <th>medium</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>type</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>date of publication</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="tableHeader">software & services</th>
+                                </tr>
+                                <tr>
+
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="tableHeader">resources</th>
+                                </tr>
+
+                                </tr>
+
+                            </table>
+                            <button class="errorHeader collapsible">errors</button>
+                            <div class="collapseContent">
+                                <table>
+                                    <tr>
+
+                                    </tr>
+                                    <tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="caseStudy">
+                            <h2>
+                                about this project
+                            </h2>
+                            <p>
+
+                            </p>
+                            <h2>
+                                creating this project
+                            </h2>
+                            <p>
+
+
+                                <br><br>
+                            </p>
+                            <h2>
+                                takeaways from this project
+                            </h2>
+                            <p>
+                                <big>what I learned</big><br>
+                                
+                            </p>
+                            <br>
+                            <p>
+                                <big>mistakes I made</big><br>
+
+                            </p>
+                        </div>
+
+                    </div>
+            
+                    <!--content-->
+</div>
+        
+                <div class="footer">
+                    <p>&copy; <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                      </script>, Durjoy Edward </p>
+                </div>
+            </div>
         </div>
 
-        <!--content-->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("activeCollapse");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                }
+              });
+            }
 
-        <div class="footer">
-            <p>&copy; <script type="text/javascript">
-                document.write(new Date().getFullYear());
-              </script>, Durjoy Edward </p>
-        </div>
+        </script>
+
     </body>
 </html>

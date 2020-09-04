@@ -55,7 +55,7 @@ header {
 
 .hero {
     width: 100%;
-    padding: 75px 0;
+    padding: 25px 0;
     text-align: center;
     color: white;
 }
@@ -265,12 +265,6 @@ a:hover {
     text-align: center;
     font-family: "Merriweather", serif;
     font-weight: 600;
-}
-
-.aboutContent {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: 2;
 }
 
 .aboutContent table {
